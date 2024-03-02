@@ -1,4 +1,4 @@
-from arrays import Array
+from .arrays import Array
 
 class Stack:
     def __init__(self, size: int = 127) -> None:
@@ -16,7 +16,8 @@ class Stack:
         result = self.items.pop()
         self.curr_stack_size -= 1
         return result
-    
+
+    @property    
     def top(self) -> int:
         if self.curr_stack_size == 0:
             return None
